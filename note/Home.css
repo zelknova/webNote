@@ -1,0 +1,126 @@
+.u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 661px;
+}
+
+.u-section-1 .u-text-1 {
+  margin: 50px 0 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.875rem;
+  margin: 50px 0 0;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: none;
+  font-size: 1.875rem;
+  background-image: none;
+  margin: 50px auto 0 142px;
+  padding: 10px 45px;
+}
+
+.u-section-1 .u-btn-2 {
+  border-style: none;
+  font-size: 1.875rem;
+  background-image: none;
+  margin: -68px auto 0;
+  padding: 10px 67px 10px 66px;
+}
+
+.u-section-1 .u-btn-3 {
+  border-style: none;
+  font-size: 1.875rem;
+  background-image: none;
+  margin: -68px 67px 0 auto;
+  padding: 10px 60px;
+}
+
+.u-section-1 .u-btn-4 {
+  border-style: none;
+  font-size: 1.875rem;
+  background-image: none;
+  margin: 50px auto 0;
+  padding: 10px 60px;
+}
+
+.u-section-1 .u-btn-5 {
+  border-style: none;
+  font-size: 1.875rem;
+  margin: -68px auto 0 148px;
+  padding: 10px 45px;
+}
+
+.u-section-1 .u-btn-6 {
+  border-style: none;
+  font-size: 1.875rem;
+  margin: -68px 158px 0 auto;
+  padding: 10px 40px;
+}
+
+.u-section-1 .u-btn-7 {
+  border-style: none;
+  font-size: 1.875rem;
+  background-image: none;
+  margin: 50px auto 60px;
+  padding: 10px 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 602px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: -272px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-btn-5 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-6 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 461px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 346px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: -267px;
+  }
+
+  .u-section-1 .u-btn-7 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 218px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: -134px;
+  }
+}
