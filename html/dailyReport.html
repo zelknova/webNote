@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/dailyReportStyle.css" />
+    <title>Daily Report</title>
+  </head>
+  <body>
+    <header>
+      <p>메뉴 공통. 로고, WebNote, 로그인이 됨. userProfile</p>
+    </header>
+    <hr />
+    <h1>데일리리포트</h1>
+    <hr />
+    <fieldset>
+      <legend>기본설정</legend>
+      <ul>
+        <li>
+          <label for="dr-start-time">시작시간</label>
+          <input type="time" id="dr-start-time" />
+        </li>
+        <li>
+          <label for="dr-interval-time">시간간격</label>
+          <input type="time" id="dr-interval-time" />
+        </li>
+        <li>
+          <fieldset>
+            <legend>오늘의 할일</legend>
+            <label for="dr-first-priority">1.</label>
+            <input
+              type="text"
+              id="dr-first-priority"
+              placeholder="우선순위 1"
+            />
+            <br />
+            <label for="dr-second-priority">2.</label>
+            <input
+              type="text"
+              id="dr-second-priority"
+              placeholder="우선순위 2"
+            />
+            <br />
+            <label for="dr-third-priority">3.</label>
+            <input
+              type="text"
+              id="dr-third-priority"
+              placeholder="우선순위 3"
+            />
+          </fieldset>
+        </li>
+        <!-- <fieldset>
+          <legend>오늘의 할일</legend>
+          <label for="first-priority">1.</label>
+          <input type="text" id="first-priority" placeholder="우선순위 1" />
+          <br />
+          <label for="second-priority">2.</label>
+          <input type="text" id="second-priority" placeholder="우선순위 2" />
+          <br />
+          <label for="third-priority">3.</label>
+          <input type="text" id="third-priority" placeholder="우선순위 3" />
+        </fieldset> -->
+      </ul>
+    </fieldset>
+    <br />
+    <table class="dr-basic-table">
+      <caption></caption>
+      <thead>
+        <tr>
+          <th class="dr-tbl-time">시 간</th>
+          <th class="dr-tbl-content">내 용</th>
+          <th class="dr-tbl-focus">집중도</th>
+          <th class="dr-tbl-reason">집중도 이유</th>
+          <th class="dr-tbl-distraction">딴 짓</th>
+          <th class="dr-tbl-reason">딴짓이유</th>
+        </tr>
+        <tbody>
+           <tr>
+               <td>05:00</td>
+               <td>기상, 세면, 빡독x하노버 준비</td>
+               <td>
+               
+                       <label><input type="radio" name="1" value="1"> </label>
+                   
+                   <input type="radio" name="2" value="2">
+                   <input type="radio" name="3" value="3">
+                   <input type="radio" name="4" value="4">
+                   <input type="radio" name="5" value="5">
+               
+               </td>
+               <td>잠이 덜깸</td>
+               <td>휴대폰</td>
+               <td>카톡 확인</td>
+
+           </tr> 
+        </tbody>
+      </thead>
+    </table>
+  </body>
+</html>
