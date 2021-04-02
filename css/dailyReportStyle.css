@@ -24,3 +24,9 @@ th,
 td {
   padding: 10px 20px;
 }
+
+.dr-review {
+  width: 40%;
+  display: inline-block;
+  margin: 10px;
+}
