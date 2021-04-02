@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필사노트</title>
+    
+</head>
+<body>
+    <header>
+        <div class="home-menu">
+          <div class="home-logo">
+            <a href="index.html">
+              <img
+                class="home-logo-img"
+                src="images/sampleLogo/logo1.png"
+                alt="home logo"
+              />
+            </a>
+          </div>
+          <div class="home-name">
+            <h1><a href="index.html"> WebNote</a></h1>
+          </div>
+          <div class="home-logInSignIn">
+            <div class="home-logIn">
+              <a href="/html/logIn.html" target="_blank">Log In</a>
+            </div>
+            <div class="home-signIn">
+              <a href="/html/signIn.html" target="_blank">Sign In</a>
+            </div>
+          </div>
+          <div class="home-user">
+            <img class="home-user-img" src="images/user.png" alt="user pic" />
+          </div>
+        </div>
+      </header>
+      <hr />
+    <aside class="sidebar1">          <!--각 목록 들어가면 main창내에서만 노트가 바뀌도록 구성하기-->
+        <ul>읽은책목록        
+            <li>책제목1</li>
+            <Li>책제목2</Li>
+            <li>책제목3</li>
+        </ul>
+    </aside>
+    <main class="content">
+        <table class="note">
+            <caption>자유롭게 필사하세요</caption>
+            <tr>
+               <td class="subject">소제목</td>     <!--txt1과 같은 너비지정-->
+               <td class="note_quote">인상깊은구절</td>   <!--txt2와 같은 너비지정-->
+            </tr>
+            <tr>
+                <td class="txt1">             <!--txt영역은 노트형태로 꾸며주기-->
+                    <textarea class="txt1" name="txt1" id="txt1" cols="80" rows="30" placeholder="소제목을 입력하세요"></textarea>
+                </td>
+                <td class="txt2">
+                    <textarea class="txt2" name="txt2" id="txt2" cols="80" rows="30" placeholder="인상깊은 구절을 입력하세요"></textarea>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <aside class="sidebar2"> <!--임의지정..부가기능 더 생각해보기-->
+        <ul>필사책추천
+            <li>책제목1</li>
+            <li>책제목2</li>
+            <li>책제목3</li>
+        </ul>
+    </aside>
+    <hr>
+    <footer class="home-footer">
+        <div class="home-footer-txt">
+          <p>by HalloHannover</p>
+        </div>
+      </footer>
+</body>
+</html>
