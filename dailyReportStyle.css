@@ -1,0 +1,45 @@
+
+
+.dr-basic-table {
+  border-collapse: collapse;
+  width: fit-content;    
+  height: fit-content;
+  border: 1px solid #ccc;    
+}
+
+.dr-tbl-time {
+  width: fit-content;
+  border:1px solid #ccc;
+}
+
+.dr-tbl-content {
+  width: fit-content;
+  border: 1px solid#ccc;
+  width: 100%;
+  height: 100%;
+}
+
+table,
+th,
+td {
+  text-align: center;
+}
+
+th,
+td {
+  border: solid#ccc 1px;
+}
+th{
+  background-color: gainsboro;
+}
+
+.dr-review {
+  width: fit-content;
+  display: inline-block;
+  margin: 10px;
+}
+.txtcontent{
+  width: fit-content;
+  border: none;
+  resize: none;
+}
