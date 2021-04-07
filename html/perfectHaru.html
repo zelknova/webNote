@@ -19,5 +19,495 @@
       <br />
       여기 적은 내용이 placeholder 형식으로 되어 있어서 쓸때 확인 가능.
     </p>
+    <main>
+      <fieldset>
+        <legend>기본설정</legend>
+        <ul>
+          <li>
+            <label for="dr-start-time">시작시간</label>
+            <input type="time" id="dr-start-time" />
+          </li>
+          <li>
+            <label for="dr-interval-time">시간간격</label>
+            <input type="time" id="dr-interval-time" />
+          </li>
+          <li>
+            <fieldset>
+              <legend>반드시 할일</legend>
+              <label for="dr-first-priority">1.</label>
+              <input
+                type="text"
+                id="dr-first-priority"
+                placeholder="우선순위 1"
+              />
+              <br />
+              <label for="dr-second-priority">2.</label>
+              <input
+                type="text"
+                id="dr-second-priority"
+                placeholder="우선순위 2"
+              />
+              <br />
+              <label for="dr-third-priority">3.</label>
+              <input
+                type="text"
+                id="dr-third-priority"
+                placeholder="우선순위 3"
+              />
+            </fieldset>
+          </li>
+        </ul>
+      </fieldset>
+      <hr />
+      <table class="dr-basic-table">
+        <caption></caption>
+        <thead>
+          <tr>
+            <th class="dr-tbl-time">시간</th>
+            <th class="dr-tbl-content">내용</th>
+            <th class="dr-tbl-focus">시간활용 분야</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>05:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder="최대한 자세히 적어 주세요. 예) 퇴근후 스벅에서 <초집중> 완독하고 귀가하기"
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>05:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder="여기에 작성한 내용이 데일리리포트 내용에 자동으로 입력. 데일리리포트에서는 집중도 있게 성공했는지 여부만 확인"
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>06:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>06:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>07:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>07:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>08:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>08:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>09:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>09:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>10:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>10:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>11:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>11:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>12:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>13:00</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>13:30</td>
+            <td>
+              <textarea
+                name="perfectContents"
+                cols="50"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+            </td>
+            <td>
+              <select>
+                <option value="daily">일상생활</option>
+                <option value="move">이동시간</option>
+                <option value="work">업무시간</option>
+                <option value="study">학습시간</option>
+                <option value="train">운동</option>
+                <option value="rest">취침시간</option>
+                <option value="reading">독서</option>
+                <option value="user">사용자지정1</option>
+                <option value="user">사용자지정2</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <a href="dailyReport.html" target="_blank">
+        <button>제출</button>
+      </a>
+    </footer>
   </body>
 </html>
