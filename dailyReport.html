@@ -4,16 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/dailyReportStyle.css" />
+    <link rel="stylesheet" href="dailyReportStyle.css" />
     <title>Daily Report</title>
   </head>
-  <body>
-    <header>
-      <p>메뉴 공통. 로고, WebNote, 로그인이 됨. userProfile</p>
+  <body id="container" class="container">
+    <header id="header" class="header">
+      <img class="mainlogo" src="../images/sampleLogo/logo1.png" alt="mainlogo" onclick="window.open()">
+      <h1 class="subject" onclick="window.open()">데일리리포트</h1>
+      <button class="signin" onclick="location.href='address'">SignIn</button>
+      <button class="signup" onclick="location.href='address'">SignUp</button>
+      <img class="userlogo" src="../images/user.png" alt="userlogo" onclick="window.open()">  
     </header>
     <hr />
-    <h1>데일리 리포트</h1>
-    <hr />
+    <aside id="sidearea" class="sidearea">
+      <fieldset>
+        <legend>메뉴</legend>
+      <ul>
+        <a href=""><li>완벽한하루</li></a>
+        <a href=""><li>데일리리포트</li></a>
+        <a href=""><li>필사노트</li></a>
+        <a href=""><li>마인드맵</li></a>
+        <a href=""><li>서평노트</li></a>
+        <a href=""><li>노트설정</li></a>
+      </ul>
+    </fieldset>
+    </aside>
+    <main id="mainarea" class="mainarea">
     <fieldset>
       <legend>기본설정</legend>
       <ul>
@@ -151,10 +167,12 @@
         required
       ></textarea>
     </div>
-    <footer>
       <a href="perfectHaru.html" target="_blank">
         <button>완벽한 하루 도전</button>
       </a>
+    </main>
+    <hr>
+    <footer id="footer" class="footer">
     </footer>
   </body>
 </html>
