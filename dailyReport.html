@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dailyReportStyle.css" />
+    <title>Daily Report</title>
+  </head>
+  <body id="container" class="container">
+    <header id="header" class="header">
+      <img class="mainlogo" src="../images/sampleLogo/logo1.png" alt="mainlogo" onclick="window.open()">
+      <h1 class="subject" onclick="window.open()">데일리리포트</h1>
+      <button class="signin" onclick="location.href='address'">SignIn</button>
+      <button class="signup" onclick="location.href='address'">SignUp</button>
+      <img class="userlogo" src="../images/user.png" alt="userlogo" onclick="window.open()">  
+    </header>
+    <hr />
+    <aside id="sidearea" class="sidearea">
+      <fieldset>
+        <legend>메뉴</legend>
+      <ul>
+        <a href=""><li>완벽한하루</li></a>
+        <a href=""><li>데일리리포트</li></a>
+        <a href=""><li>필사노트</li></a>
+        <a href=""><li>마인드맵</li></a>
+        <a href=""><li>서평노트</li></a>
+        <a href=""><li>노트설정</li></a>
+      </ul>
+    </fieldset>
+    </aside>
+    <main id="mainarea" class="mainarea">
+    <fieldset>
+      <legend>기본설정</legend>
+      <ul>
+        <li>
+          <label for="dr-start-time">시작시간</label>
+          <input type="time" id="dr-start-time" />
+        </li>
+        <li>
+          <label for="dr-interval-time">시간간격</label>
+          <input type="time" id="dr-interval-time" />
+        </li>
+        <li>
+          <fieldset>
+            <legend>오늘의 할일</legend>
+            <label for="dr-first-priority">1.</label>
+            <input
+              type="text"
+              id="dr-first-priority"
+              placeholder="우선순위 1"
+            />
+            <br />
+            <label for="dr-second-priority">2.</label>
+            <input
+              type="text"
+              id="dr-second-priority"
+              placeholder="우선순위 2"
+            />
+            <br />
+            <label for="dr-third-priority">3.</label>
+            <input
+              type="text"
+              id="dr-third-priority"
+              placeholder="우선순위 3"
+            />
+          </fieldset>
+        </li>
+      </ul>
+    </fieldset>
+    <br />
+    <table class="dr-basic-table">
+      <caption></caption>
+      <thead>
+        <tr>
+          <th class="dr-tbl-time">시 간</th>
+          <th class="dr-tbl-content">내 용</th>
+          <th class="dr-tbl-focus">집중도</th>
+          <th class="dr-tbl-reason">집중도 이유</th>
+          <th class="dr-tbl-distraction">딴 짓</th>
+          <th class="dr-tbl-reason">딴짓이유</th>
+          <th class="dr-tbl-reason">한줄평</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>05:00</td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">기상, 세면, 빡독x하노버 준비</textarea></td>
+          <td>
+            <label>
+              <select name="focuslvl" id="focuslvl">
+                <option value="5">최상</option>
+                <option value="4">상</option>
+                <option value="3">중</option>
+                <option value="2">하</option>
+                <option value="1">최하</option>
+              </select>
+            </label>
+          </td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">잠이 덜깸</textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">휴대폰 사용</textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">카톡 확인</textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">자동차모드할것</textarea></td>
+        </tr>
+        <tr>
+          <td>05:30</td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">빡독x하노버</textarea></td>
+          <td>
+            <label>
+              <select name="focuslvl" id="focuslvl">
+                <option value="5">최상</option>
+                <option value="4">상</option>
+                <option value="3">중</option>
+                <option value="2">하</option>
+                <option value="1">최하</option>
+              </select>
+            </label>
+          </td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">휴대폰 없이 책만 200페이지 제대로 읽음</textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent"></textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">Time Timer앱 도움이 됨</textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent"></textarea></td>
+        </tr>
+        <tr>
+          <td>07:00</td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">출근 with 유튜브영상, email정리</textarea></td>
+          <td>
+            <!-- 이름을 자동으로 generator로 만들 수 있어야 함 -->
+            <label>
+              <select name="focuslvl" id="focuslvl">
+                <option value="5">최상</option>
+                <option value="4">상</option>
+                <option value="3">중</option>
+                <option value="2">하</option>
+                <option value="1">최하</option>
+              </select>
+            </label>
+          </td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">2배속했더니 잠깐만 딴생각해도 넘어감</textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent"></textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent"></textarea></td>
+          <td><textarea class="txtcontent" name="txtcontent" id="txtcontent">배속은 1.5가 최대임</textarea></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <div class="dr-review">
+      <legend>하루 피드백</legend>
+      <label for="daily-feedback"></label>
+      <textarea
+        id="dr-feedback"
+        cols="70"
+        rows="10"
+        placeholder="메타인지를 위해 꼭 작성하세요."
+        required
+      ></textarea>
+    </div>
+
+    <div class="dr-review">
+      <legend>하루 감사</legend>
+      <label for="daily-feedback"></label>
+      <textarea
+        id="dr-feedback"
+        cols="70"
+        rows="10"
+        placeholder="감사한 일을 적어봅시다."
+        required
+      ></textarea>
+    </div>
+      <a href="perfectHaru.html" target="_blank">
+        <button>완벽한 하루 도전</button>
+      </a>
+    </main>
+    <hr>
+    <footer id="footer" class="footer">
+    </footer>
+  </body>
+</html>

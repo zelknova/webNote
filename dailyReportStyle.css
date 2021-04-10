@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+}
+/*헤더영역*/
+.header{
+  background-color: bisque;
+  width: 100%;
+}
+.subject{
+  color: grey;
+  display: inline;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.mainlogo{
+  padding-top: 10px;
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.signin{
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 220px;
+}
+.signup{
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+}
+.userlogo{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+/*main영역*/
+.sidearea{
+  position: fixed;
+  display: inline-block;
+  width: 20%;
+  height: 900px;
+  padding-bottom: 150px;
+}
+.mainarea{
+  margin-left: 20%;
+  display: inline-block;
+  width: 80%;
+  height: 900px;
+  background-color: lemonchiffon;
+  padding-bottom: 150px;
+  }
+.footer{
+  display: inline-block;
+  width: 100%;
+  background-color: lightgrey;
+  position: relative;
+  margin-top: -150px;
+  height: 150px;
+}
+.dr-basic-table {
+  border-collapse: collapse;
+  width: fit-content;    
+  height: fit-content;
+  border: 1px solid #ccc;    
+}
+
+.dr-tbl-time {
+  width: fit-content;
+  border:1px solid #ccc;
+}
+
+.dr-tbl-content {
+  width: fit-content;
+  border: 1px solid#ccc;
+  width: 100%;
+  height: 100%;
+}
+
+table,
+th,
+td {
+  text-align: center;
+}
+
+th,
+td {
+  border: solid#ccc 1px;
+}
+th{
+  background-color: gainsboro;
+}
+
+.dr-review {
+  width: fit-content;
+  display: inline-block;
+  margin: 10px;
+}
+.txtcontent{
+  width: fit-content;
+  border: none;
+  resize: none;
+  background-color: lemonchiffon;
+}
