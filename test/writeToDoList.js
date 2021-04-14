@@ -6,6 +6,19 @@ const TODO_LS = "toDos";
 
 let toDos = [];
 
+// Add a "checked" symbol when clicking on a list item
+// const list = document.querySelector("ul");
+toDoList.addEventListener(
+  "click",
+  function (ev) {
+    if ((ev.target.tagName = "li")) {
+      ev.target.classList.add("list_checked");
+    }
+  },
+  false
+);
+
+//리스트에서 지우는 기능
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
@@ -24,8 +37,7 @@ function saveToDos() {
 function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
-  delBtn.innerText = "삭제";
-  // delBtn.innerText = "❌";
+  delBtn.innerText = "❌";
   delBtn.addEventListener("click", deleteToDo);
   const span = document.createElement("span");
   const newId = toDos.length + 1;

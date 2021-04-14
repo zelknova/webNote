@@ -1,0 +1,251 @@
+/* * {
+  margin: 0;
+} */
+
+/*헤더영역*/
+/*reset.css link added  ex. list-style: none*/
+/*basic setting*/
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+  --mainAndBtn: lemonchiffon;
+  --footer: lightgrey;
+}
+
+* {
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Single Day", cursive;
+}
+
+a {
+  text-decoration: none; /*링크 밑줄과 파란색 글씨 없앰*/
+  color: var(--text-color);
+}
+
+/*the largest to smallst*/
+.navbar {
+  display: flex; /*총 3개의 박스가 한줄에 나란히*/
+  justify-content: space-between; /*양쪽정렬 - 가로축*/
+  align-items: center; /*세로축 center 정렬 */
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+
+/*로고가 있는 div 박스 설정*/
+.navbar__logo {
+  font-size: 24px; /*데일리리포트 글자 커짐*/
+  color: var(--text-color); /*글자 색깔*/
+}
+
+/*로고 아이콘 설정*/
+.navbar__logo i {
+  color: var(--accent-color);
+}
+
+/*Menu CSS*/
+.navbar__menu {
+  display: flex; /*리스트 세로나열을 가로나열로 바꿈*/
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar__menu li {
+  padding: 8px 12px; /*마진은 나중에 클릭할 수 있는 범위가 작아지기 때문에 패딩이 유리 */
+  width: 100%;
+  text-align: center; /*너비가 넓어지면 텍스트는 기본값인 왼쪽정렬됨. 따라서 센터지정 필요*/
+}
+
+.navbar__menu li :hover {
+  background-color: var(--accent-color); /*마우스 올리면 나오는 효과*/
+  border-radius: 4px;
+}
+
+.navbar__login li :hover {
+  color: var(--accent-color);
+}
+
+/*login box*/
+.navbar__login {
+  display: flex;
+  color: var(--text-color);
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar__login li {
+  padding: 8px 12px;
+}
+
+/*Hamburger Btn*/
+.navbar__toogleBtn {
+  position: absolute;
+  /*원래 문서 흐름에서 나와서 포지셔닝을 할 수 있는 태그는
+  position: absolute*/
+  right: 32px;
+  font-size: 24px;
+  color: var(--accent-color);
+  display: none; /*평소에는 안보이게 하고, 창이 작아졌을때만 나오게 할 것이라서*/
+}
+
+/*창크기에 따른 반응형 레이아웃 - 미디어 쿼리*/
+@media screen and (max-width: 768px) {
+  /*768은 임의 수. 노트북,태블릿, 휴대폰에 따라 다르게 적용 가능*/
+  /*1 - 2 - 3 배열을 1
+                     2
+                     3 으로 만들고자 함*/
+  .navbar {
+    flex-direction: column;
+    /*첫번째 로고는 왼쪽정렬을 하고 싶음
+    중심축이 수직이지만 수평으로 놓고 싶기에 align-items*/
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    /*flex 하면 가로 정렬인데 direction을 이용하면 세로방향 즉 column 으로 내릴 수 있음*/
+    align-items: center; /*home, write 이 메뉴는 중앙정렬*/
+    /*화면이 너무 좁으면 align-items을 center로 해도 변화 없음
+    따라서 너비를 100%로 변환*/
+    width: 100%;
+    display: none; /*토글버튼을 눌렀을때만 나오게 하기 위함*/
+  }
+
+  .navbar__menu a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__login {
+    justify-content: center;
+    width: 100%;
+    display: none; /*토글버튼을 눌렀을때만 나오게 하기 위함*/
+  }
+
+  .navbar__toogleBtn {
+    display: block;
+    /*768 미만으로 떨어지면 나오게 됨*/
+  }
+
+  .navbar__menu.active,
+  .navbar__login.active {
+    display: flex; /*원래 상태*/
+  }
+}
+
+/*main영역*/
+.mainarea {
+  display: inline-block;
+  width: 100%;
+  height: 900px;
+  background-color: var(--mainAndBtn);
+  padding-bottom: 150px;
+  padding-left: 15px;
+}
+
+/*todoList 영역*/
+.deleteBtn-todo {
+  margin-left: 10px;
+  background-color: var(--mainAndBtn);
+  border: none;
+  padding: 0;
+  font-size: x-small;
+  text-align: center;
+}
+
+#dr-write-todolist {
+  width: 250px;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+span li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+span li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+.list_checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+span li.list_checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/*footer 영역*/
+.footer {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--footer);
+  position: relative;
+  margin-top: -150px;
+  height: 150px;
+}
+.dr-basic-table {
+  border-collapse: collapse;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #ccc;
+}
+
+.dr-tbl-time {
+  width: fit-content;
+  border: 1px solid #ccc;
+}
+
+.dr-tbl-content {
+  width: fit-content;
+  border: 1px solid#ccc;
+  width: 100%;
+  height: 100%;
+}
+
+table,
+th,
+td {
+  text-align: center;
+}
+
+th,
+td {
+  border: solid#ccc 1px;
+}
+th {
+  background-color: gainsboro;
+}
+
+.dr-review {
+  width: fit-content;
+  display: inline-block;
+  margin: 10px;
+}
+.txtcontent {
+  width: fit-content;
+  border: none;
+  resize: none;
+  background-color: lemonchiffon;
+}
