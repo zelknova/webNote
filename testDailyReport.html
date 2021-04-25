@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<ht lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="testDailyReportStyle.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="headerCss.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Single+Day&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script src="header.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/2d773ac096.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/2d773ac096.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Daily Report</title>
+  </head>
+  <body id="container" class="container">
+    <!--Header-->
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="#"><i class="fab fa-dailymotion"></i></a>
+
+        <a href="#">데일리리포트</a>
+      </div>
+      <ul class="navbar__menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Write</a></li>
+        <li><a href="#">Analyze</a></li>
+        <li><a href="#">Perfect_Day</a></li>
+        <li><a href="#">Setting</a></li>
+      </ul>
+  
+      <ul class="navbar__login">
+        <li>
+          <a href="#">
+            <i class="fas fa-user-plus"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-user-lock"></i>
+          </a>
+        </li>
+      </ul>
+
+      <a href="#" class="navbar__toogleBtn">
+        <i class="fas fa-bars"></i>
+      </a>
+    </nav>
+    
+    <!--Main-->
+    <main id="mainarea" class="mainarea">
+      <!--ToDo List-->
+      <div class="dr-container">
+        <div class="toDoList__Box">
+          <p class="dr-sub1">ToDo List 작성하기</p>
+          <form class="dr-toDoForm">
+            <input
+              id="dr-write-todolist"
+              type="text"
+              placeholder="반드시 해야할 일을 적으세요."
+            />
+          </form>
+          <br>
+          <!-- <ol class="dr-show-toDolist"></ol> -->
+          <span class="dr-show-toDolist"></span>
+          <!-- <script src="writeToDoList.js"></script>   -->
+        </div>
+        <div class="haru-feedback">
+          <p class="dr-sub2">하루 피드백</p>
+          <label for="dr-feedback"></label>
+          <textarea class="dr-textarea"
+            id="dr-feedback"
+            rows="5"
+            placeholder="메타인지를 위해 꼭 작성하세요."
+            required></textarea>
+        </div>
+        <div class="haru-thankyou">
+        <p class="dr-sub3">하루 감사</p>
+        <label for="dr-feedback"></label>
+        <textarea class="dr-textarea"
+          id="dr-feedback"
+          rows="5"
+          placeholder="감사한 일을 적어봅시다."
+          required
+          ></textarea>
+        </div>
+      </div>
+      <br />
+      <div class="dr-table-container">
+          <li class="dr-table-item1">시간</li>
+          <li class="dr-table-item2">내용</li>
+          <li class="dr-table-item3">집중도</li>
+          <li class="dr-table-item4">딴짓이유</li>
+          <li class="dr-table-item5">한줄평</li>
+          <!-- div.container>div.item${$}*10 -->
+          <!-- <div class="dr-tbl-content"> -->
+            <!-- <ul class="dr-tbl-inputarea"> -->
+              <li><input class="dr-tbl-input-time" type="text" placeholder="07:00"></li>
+              <li><input class="dr-tbl-input-context" type="text" placeholder="구체적으로 적으세요"></li>
+              <li><select class="dr-tbl-input-focus-select" onchange="this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor">
+                <option style="background-color: #6effff; color: whitesmoke;">최상</option>
+                <option style="background-color: #66ffa6; color: whitesmoke;">상</option>
+                <option style="background-color: #ffff56; color: whitesmoke;">중</option>
+                <option style="background-color: #ffc246; color: whitesmoke;">하</option>
+                <option style="background-color: #ff616f; color: whitesmoke;">최하</option>
+              </select></li>
+              <li><input class="dr-tbl-input-why-focus" type="text" placeholder="핸디 사용"></li>
+              <li><input class="dr-tbl-input-feedback" type="text" placeholder="핸디 자동차 모드!"></li>
+            <!-- </ul> -->
+          <!-- </div> -->
+      </div>
+      
+  <!--inputarea가 container-->
+      
+
+          <div class="dr-table-btn">
+            <a href="#"><i class="far fa-plus-square"></i></a>
+            <a href="#"><i class="far fa-minus-square"></i></a>
+          </div>
+    </main>
+    <hr />
+    <footer id="footer" class="footer"></footer>
+    <script src="writeToDoList.js"></script> 
+  </body>
+</html>
+
+
