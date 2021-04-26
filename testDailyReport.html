@@ -101,15 +101,31 @@
       <br />
       <div class="dr-table-container">
           <li class="dr-table-item1">시간</li>
-          <li class="dr-table-item2">내용</li>
-          <li class="dr-table-item3">집중도</li>
-          <li class="dr-table-item4">딴짓이유</li>
-          <li class="dr-table-item5">한줄평</li>
+          <li class="dr-table-item2">내용 <i class="far fa-question-circle"></i></li>
+          <li class="dr-table-item3">집중도 <i class="far fa-question-circle"></i></li>
+          <li class="dr-table-item4">딴짓이유 <i class="far fa-question-circle"></i></li>
+          <li class="dr-table-item5">한줄평 <i class="far fa-question-circle"></i></li>
           <!-- div.container>div.item${$}*10 -->
           <!-- <div class="dr-tbl-content"> -->
             <!-- <ul class="dr-tbl-inputarea"> -->
+              <!-- Input Time -->
               <li><input class="dr-tbl-input-time" type="text" placeholder="07:00"></li>
-              <li><input class="dr-tbl-input-context" type="text" placeholder="구체적으로 적으세요"></li>
+              <!-- Input Context -->
+              <!-- <li><input class="dr-tbl-input-context" type="text" placeholder="구체적으로 적으세요"></li> -->
+              <div class="context__Box">
+                <!-- <p class="dr-sub1">Inhalt</p> -->
+                <form class="dr-tbl-input-context">
+                  <input
+                    id="dr-write-context"
+                    type="text"
+                    placeholder="구체적으로 적으세요!"
+                  />
+                </form>
+                <br>
+                <span class="dr-show-contextList"></span>
+              </div>
+              
+              <!-- Input Focus -->
               <li><select class="dr-tbl-input-focus-select" onchange="this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor">
                 <option style="background-color: #6effff; color: whitesmoke;">최상</option>
                 <option style="background-color: #66ffa6; color: whitesmoke;">상</option>
@@ -134,6 +150,7 @@
     <hr />
     <footer id="footer" class="footer"></footer>
     <script src="writeToDoList.js"></script> 
+    <script src="dr_content.js"></script> 
   </body>
 </html>
 

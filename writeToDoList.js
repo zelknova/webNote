@@ -1,5 +1,5 @@
 const toDoForm = document.querySelector(".dr-toDoForm"),
-  toDoInput = toDoForm.querySelector("input"),
+  toDoInput = toDoForm.querySelector("#dr-write-todolist"),
   toDoList = document.querySelector(".dr-show-toDolist");
 
 const TODO_LS = "toDos";
@@ -48,30 +48,31 @@ function saveToDos() {
 function paintToDo(text) {
   if (text === "") {
     alert("내용을 입력해주세요");
-} else {
-  const li = document.createElement("li");
-  // const ul = document.createElement("ul");
-  const delBtn = document.createElement("button");
-  delBtn.innerText = "❌";
-  delBtn.addEventListener("click", deleteToDo);
-  const span = document.createElement("span");
-  // const li = document.createElement("li");
-  const newId = toDos.length + 1;
-  // span.innerText = text;
-  li.innerText = text;
-  li.appendChild(span);
-  span.appendChild(delBtn);
-  delBtn.classList.add("deleteBtn-todo"); /* 생성된 element에 클래스이름 설정*/
-  li.id = newId;
-  toDoList.appendChild(li);
-  
+  } else {
+    const li = document.createElement("li");
+    // const ul = document.createElement("ul");
+    const delBtn = document.createElement("button");
+    delBtn.innerText = "❌";
+    delBtn.addEventListener("click", deleteToDo);
+    const span = document.createElement("span");
+    // const li = document.createElement("li");
+    const newId = toDos.length + 1;
+    // span.innerText = text;
+    li.innerText = text;
+    li.appendChild(span);
+    span.appendChild(delBtn);
+    delBtn.classList.add(
+      "deleteBtn-todo"
+    ); /* 생성된 element에 클래스이름 설정*/
+    li.id = newId;
+    toDoList.appendChild(li);
+
     const toDoObj = {
       text: text,
       id: newId, //서버를 위한 아이디부여
     };
     toDos.push(toDoObj);
-    saveToDos();   //push해서 local데이터에 저장.
-    
+    saveToDos(); //push해서 local데이터에 저장.
   }
 }
 

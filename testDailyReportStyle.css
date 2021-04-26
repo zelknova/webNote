@@ -273,6 +273,8 @@ span li:hover {
   grid-area: feedback;
 }
 
+/*각 항목 도움말 표시 s373 */
+
 /* .dr-table-item2,
 .dr-tbl-content {
   grid-column: 2/4;
