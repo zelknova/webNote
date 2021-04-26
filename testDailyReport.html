@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<ht lang="ko">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="testDailyReportStyle.css" />
-    <link rel="stylesheet" href="mobile.css" />
-    <link rel="stylesheet" href="headerCss.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Single+Day&family=Source+Sans+Pro&display=swap"
@@ -41,7 +39,7 @@
         <li><a href="#">Perfect_Day</a></li>
         <li><a href="#">Setting</a></li>
       </ul>
-  
+
       <ul class="navbar__login">
         <li>
           <a href="#">
@@ -59,7 +57,7 @@
         <i class="fas fa-bars"></i>
       </a>
     </nav>
-    
+
     <!--Main-->
     <main id="mainarea" class="mainarea">
       <!--ToDo List-->
@@ -73,7 +71,7 @@
               placeholder="반드시 해야할 일을 적으세요."
             />
           </form>
-          <br>
+          <br />
           <!-- <ol class="dr-show-toDolist"></ol> -->
           <span class="dr-show-toDolist"></span>
           <!-- <script src="writeToDoList.js"></script>   -->
@@ -81,77 +79,156 @@
         <div class="haru-feedback">
           <p class="dr-sub2">하루 피드백</p>
           <label for="dr-feedback"></label>
-          <textarea class="dr-textarea"
+          <textarea
+            class="dr-textarea"
             id="dr-feedback"
             rows="5"
             placeholder="메타인지를 위해 꼭 작성하세요."
-            required></textarea>
+            required
+          ></textarea>
         </div>
         <div class="haru-thankyou">
-        <p class="dr-sub3">하루 감사</p>
-        <label for="dr-feedback"></label>
-        <textarea class="dr-textarea"
-          id="dr-feedback"
-          rows="5"
-          placeholder="감사한 일을 적어봅시다."
-          required
+          <p class="dr-sub3">하루 감사</p>
+          <label for="dr-feedback"></label>
+          <textarea
+            class="dr-textarea"
+            id="dr-feedback"
+            rows="5"
+            placeholder="감사한 일을 적어봅시다."
+            required
           ></textarea>
         </div>
       </div>
       <br />
       <div class="dr-table-container">
-          <li class="dr-table-item1">시간</li>
-          <li class="dr-table-item2">내용 <i class="far fa-question-circle"></i></li>
-          <li class="dr-table-item3">집중도 <i class="far fa-question-circle"></i></li>
-          <li class="dr-table-item4">딴짓이유 <i class="far fa-question-circle"></i></li>
-          <li class="dr-table-item5">한줄평 <i class="far fa-question-circle"></i></li>
-          <!-- div.container>div.item${$}*10 -->
-          <!-- <div class="dr-tbl-content"> -->
-            <!-- <ul class="dr-tbl-inputarea"> -->
-              <!-- Input Time -->
-              <li><input class="dr-tbl-input-time" type="text" placeholder="07:00"></li>
-              <!-- Input Context -->
-              <!-- <li><input class="dr-tbl-input-context" type="text" placeholder="구체적으로 적으세요"></li> -->
-              <div class="context__Box">
-                <!-- <p class="dr-sub1">Inhalt</p> -->
-                <form class="dr-tbl-input-context">
-                  <input
-                    id="dr-write-context"
-                    type="text"
-                    placeholder="구체적으로 적으세요!"
-                  />
-                </form>
-                <br>
-                <span class="dr-show-contextList"></span>
-              </div>
-              
-              <!-- Input Focus -->
-              <li><select class="dr-tbl-input-focus-select" onchange="this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor">
-                <option style="background-color: #6effff; color: whitesmoke;">최상</option>
-                <option style="background-color: #66ffa6; color: whitesmoke;">상</option>
-                <option style="background-color: #ffff56; color: whitesmoke;">중</option>
-                <option style="background-color: #ffc246; color: whitesmoke;">하</option>
-                <option style="background-color: #ff616f; color: whitesmoke;">최하</option>
-              </select></li>
-              <li><input class="dr-tbl-input-why-focus" type="text" placeholder="핸디 사용"></li>
-              <li><input class="dr-tbl-input-feedback" type="text" placeholder="핸디 자동차 모드!"></li>
-            <!-- </ul> -->
-          <!-- </div> -->
-      </div>
-      
-  <!--inputarea가 container-->
-      
+        <li class="dr-table-item1">시간</li>
+        <li class="dr-table-item2">
+          내용
+          <i class="far fa-question-circle">
+            <span class="dr-item-help">
+              육하원칙을 이용하세요. <br />
+              ex. 집 앞 스타벅스에서 1시간 동안 사피엔스 100페이지 빡독
+            </span>
+          </i>
+        </li>
 
-          <div class="dr-table-btn">
-            <a href="#"><i class="far fa-plus-square"></i></a>
-            <a href="#"><i class="far fa-minus-square"></i></a>
-          </div>
+        <li class="dr-table-item3">
+          집중도
+          <i class="far fa-question-circle">
+            <span class="dr-item-help">
+              자신만의 기준을 만드세요. <br />
+              ex. 최상: 딴짓 x <br />
+              상:딴짓 1회 or 10초 이내 <br />
+              중: 딴짓 2회 or 30초 이내 <br />
+              하: 딴짓 3회 or 1분 이내 <br />
+              최하:딴짓 4회 이상
+            </span>
+          </i>
+        </li>
+        <li class="dr-table-item4">
+          딴짓이유
+          <i class="far fa-question-circle">
+            <span class="dr-item-help">
+              딴짓과 이유를 적으세요. <br />
+              ex.카톡 알람 울려서 자동적으로 1회 확인
+            </span>
+          </i>
+        </li>
+        <li class="dr-table-item5">
+          한줄평
+          <i class="far fa-question-circle">
+            <span class="dr-item-help">
+              원포인트 피드백 <br />
+              ex. 빡독할 때 자동차 모드 할것!
+            </span>
+          </i>
+        </li>
+        <!-- div.container>div.item${$}*10 -->
+        <!-- <div class="dr-tbl-content"> -->
+        <!-- <ul class="dr-tbl-inputarea"> -->
+        <!-- Input Time -->
+        <li>
+          <input class="dr-tbl-input-time" type="text" placeholder="07:00" />
+        </li>
+        <!-- Input Context -->
+        <!-- <li><input class="dr-tbl-input-context" type="text" placeholder="구체적으로 적으세요"></li> -->
+        <div class="context__Box">
+          <!-- <p class="dr-sub1">Inhalt</p> -->
+          <form class="dr-tbl-input-context">
+            <input
+              id="dr-write-context"
+              type="text"
+              placeholder="구체적으로 적으세요!"
+            />
+          </form>
+          <br />
+          <span class="dr-show-contextList"></span>
+        </div>
+
+        <!-- Input Focus -->
+        <li>
+          <select
+            class="dr-tbl-input-focus-select"
+            onchange="this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor"
+          >
+            <option style="background-color: #6effff; color: whitesmoke">
+              최상
+            </option>
+            <option style="background-color: #66ffa6; color: whitesmoke">
+              상
+            </option>
+            <option style="background-color: #ffff56; color: whitesmoke">
+              중
+            </option>
+            <option style="background-color: #ffc246; color: whitesmoke">
+              하
+            </option>
+            <option style="background-color: #ff616f; color: whitesmoke">
+              최하
+            </option>
+          </select>
+        </li>
+        <li>
+          <input
+            class="dr-tbl-input-why-focus"
+            type="text"
+            placeholder="핸디 사용"
+          />
+        </li>
+        <li>
+          <input
+            class="dr-tbl-input-feedback"
+            type="text"
+            placeholder="핸디 자동차 모드!"
+          />
+        </li>
+        <!-- </ul> -->
+        <!-- </div> -->
+      </div>
+      <div class="dr-timetbl-grp">
+        <span class="dr-show-timeList"></span>
+        <span class="dr-show-contextList"></span>
+        <span class="dr-show-focusList"></span>
+        <span class="dr-show-focusReasonList"></span>
+        <span class="dr-show-feedbackList"></span>
+      </div>
+      <!--inputarea가 container-->
+
+      <div class="dr-table-btn">
+        <a href="#"><i class="far fa-plus-square"></i></a>
+        <a href="#"><i class="far fa-minus-square"></i></a>
+      </div>
     </main>
     <hr />
+
     <footer id="footer" class="footer"></footer>
-    <script src="writeToDoList.js"></script> 
-    <script src="dr_content.js"></script> 
+
+    <script src="header.js" defer></script>
+    <script src="writeToDoList.js"></script>
+    <script src="dr_time.js"></script>
+    <script src="dr_content.js"></script>
+    <script src="dr_focus.js"></script>
+    <script src="dr_focusRS.js"></script>
+    <script src="dr_feedback.js"></script>
   </body>
 </html>
-
-

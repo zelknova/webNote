@@ -11,6 +11,7 @@
   --accent-color: #d49466;
   --mainAndBtn: #eee;
   --footer: lightgrey;
+  --helpBallon-color: salmon;
 }
 
 * {
@@ -139,7 +140,7 @@ a {
   }
 }
 
-/*main영역*/
+/* main 영역 */
 .mainarea {
   display: inline-block;
   width: 100%;
@@ -148,7 +149,7 @@ a {
   padding: 0 15px 150px 15px;
 }
 
-/*todoList 영역*/
+/* todoList 영역 */
 .dr-container {
   display: grid;
   /*grid-template-columns: 1fr 1fr 1fr;*/
@@ -261,6 +262,10 @@ span li:hover {
   grid-area: context;
 }
 
+#dr-write-context {
+  width: 100%;
+}
+
 .dr-tbl-input-focus-select {
   grid-area: select;
 }
@@ -273,7 +278,44 @@ span li:hover {
   grid-area: feedback;
 }
 
-/*각 항목 도움말 표시 s373 */
+/* 각 항목 도움말 표시 w3school */
+.fa-question-circle {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted var(--helpBallon-color); */
+}
+
+.fa-question-circle .dr-item-help {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--helpBallon-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin-left: -60px;
+  left: -50%;
+  bottom: 150%;
+  position: absolute;
+  /* top: -5px;
+  right: 105%; */
+  z-index: 1;
+}
+
+.fa-question-circle:hover .dr-item-help {
+  visibility: visible;
+}
+
+.fa-question-circle .dr-item-help::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 38%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--helpBallon-color) transparent transparent transparent;
+}
 
 /* .dr-table-item2,
 .dr-tbl-content {
