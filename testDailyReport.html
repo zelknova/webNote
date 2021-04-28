@@ -61,9 +61,11 @@
     <!--Main-->
     <main id="mainarea" class="mainarea">
       <!--ToDo List-->
+      <input type="date" class="dr-today-is">
       <div class="dr-container">
         <div class="toDoList__Box">
-          <p class="dr-sub1">ToDo List 작성하기</p>
+          <p class="dr-sub1">ToDo List 작성하기 <span  id="dr-num-todo" style="background-color: #66ffa6;">blank</span></p>
+          
           <form class="dr-toDoForm">
             <input
               id="dr-write-todolist"
@@ -156,7 +158,7 @@
           <!-- <p class="dr-sub1">Inhalt</p> -->
           <form class="dr-tbl-input-context">
             <input
-              id="dr-write-context"
+              class="dr-write-input"
               type="text"
               placeholder="구체적으로 적으세요!"
             />
@@ -190,14 +192,14 @@
         </li>
         <li>
           <input
-            class="dr-tbl-input-why-focus"
+            class="dr-write-input"
             type="text"
             placeholder="핸디 사용"
           />
         </li>
         <li>
           <input
-            class="dr-tbl-input-feedback"
+            class="dr-write-input"
             type="text"
             placeholder="핸디 자동차 모드!"
           />

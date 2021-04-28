@@ -150,6 +150,12 @@ a {
 }
 
 /* todoList 영역 */
+.dr-today-is {
+  margin-top: 20px;
+  background-color: var(--mainAndBtn);
+  border: none;
+}
+
 .dr-container {
   display: grid;
   /*grid-template-columns: 1fr 1fr 1fr;*/
@@ -246,28 +252,33 @@ span li:hover {
 /* 테이블메뉴 */
 .dr-table-container {
   grid-template-areas: "time context select focus feedback";
+  grid-template-columns: 100px 1fr 100px 1fr 1fr;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  /* gap: 50px; */
+  row-gap: 10px;
+  column-gap: 20px;
+  /* grid-template-columns: repeat(5, 1fr); */
 }
 /* 시간이 그리드 만든칸에 가운데 오게끔 */
-.dr-table-container li {
-  text-align: center;
-}
+/* .dr-table-container li {
+  /* text-align: center; */
 
 .dr-tbl-input-time {
   grid-area: time;
+  width: 50px;
+  /* justify-self: start; */
 }
 
 .dr-tbl-input-context {
   grid-area: context;
 }
-
-#dr-write-context {
+.dr-write-input {
   width: 100%;
 }
 
 .dr-tbl-input-focus-select {
   grid-area: select;
+  width: 100%;
 }
 
 .dr-tbl-input-why-focus {
@@ -294,12 +305,17 @@ span li:hover {
   border-radius: 6px;
   padding: 5px 0;
   margin-left: -60px;
-  left: -50%;
+  left: -38%;
   bottom: 150%;
   position: absolute;
-  /* top: -5px;
-  right: 105%; */
+  /*top: -5px;
+  right: 105%;
+  */
   z-index: 1;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .fa-question-circle:hover .dr-item-help {
@@ -316,59 +332,6 @@ span li:hover {
   border-style: solid;
   border-color: var(--helpBallon-color) transparent transparent transparent;
 }
-
-/* .dr-table-item2,
-.dr-tbl-content {
-  grid-column: 2/4;
-}
-.dr-table-item4 {
-  grid-column: 5/7;
-}
-.dr-table-item5 {
-  grid-column: 7/9;
-} */
-
-/* .dr-tbl-content {
-  display: grid;
-  grid-template-columns: repeat(15, 1fr);
-}
-
-.dr-tbl-input-time {
-  grid-column: 2/3;
-}
-
-.dr-tbl-input-context {
-  grid-column: 3/6;
-}
-
-.dr-tbl-input-focus-select {
-  grid-column: 7/8;
-}
-
-.dr-tbl-input-why-focus {
-  grid-column: 10/12;
-}
-
-.dr-tbl-input-feedback {
-  grid-column: 13/15;
-} */
-
-.dr-tbl-inputarea {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-/*input area*/
-/* .dr-table-inputarea {
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* grid-gap: 40px;
-
-/* .dr-tbl-input-time {
-  width: 50px;
-} */
 
 /*footer 영역*/
 .footer {

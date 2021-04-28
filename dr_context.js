@@ -1,14 +1,15 @@
 const contextForm = document.querySelector(".dr-tbl-input-context"),
-  contextInput = contextForm.querySelector("#dr-write-context"),
+  contextInput = contextForm.querySelector(".dr-write-input"),
   contextList = document.querySelector(".dr-show-contextList");
 
 const CONTEXT_LS = "contxt";
 
 let contxt = [];
 
-function loadContext() {
-  const loadedContext = localStorage.getItem(CONTEXT_LS);
+function paintToDo(){
+
 }
+
 
 function init() {
   loadContext();
