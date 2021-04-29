@@ -13,8 +13,6 @@ const TODO_CNT = "listNum";
 let toDos = [];
 let listNum = [];
 
-
-
 // Add a "checked" symbol when clicking on a list item
 // const list = document.querySelector("ul");
 toDoList.addEventListener(
@@ -27,16 +25,6 @@ toDoList.addEventListener(
   false
 );
 
-/*toDoList.addEventListener(
-  "click",
-  function (ev) {
-    if (ev.target.tagName === "SPAN") {
-      ev.target.classList.toggle("list_checked");
-    }
-  },
-  false
-);*/
-
 //리스트에서 지우는 기능
 function deleteToDo(event) {
   const btn = event.target;
@@ -47,7 +35,7 @@ function deleteToDo(event) {
   });
   toDos = cleanToDos;
   saveToDos();
-  init();
+  location.reload();
 }
 
 function saveToDos() {
@@ -66,9 +54,7 @@ function paintToDo(text) {
     delBtn.innerText = "❌";
     delBtn.addEventListener("click", deleteToDo);
     const span = document.createElement("span");
-    // const li = document.createElement("li");
     const newId = toDos.length + 1;
-    // span.innerText = text;
     li.innerText = text;
 
     li.appendChild(span);
@@ -95,7 +81,6 @@ function paintToDo(text) {
     document.getElementById("dr-num-todo").innerText = Number(listNum.length);
 
   }
-  // totalNum = colsole.log(listNum.length);
 }
 
 function handleSubmit(event) {
@@ -112,17 +97,8 @@ function loadToDos() {
     parsedToDos.forEach(function (toDo) {   /*Ls에 각 리스트들을 함수 돌려주고, 순서는 받는게 먼저 */
       paintToDo(toDo.text);
     });
-  // }else{
-  // totalNum = 0;
   }
 }
-
-
-
-
-// totalNum = listNum.length;   /*listnum보류*/
-
-
 
 function init() {
   loadToDos();

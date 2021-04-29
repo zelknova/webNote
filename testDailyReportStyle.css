@@ -162,9 +162,9 @@ a {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.dr-sub1,
-.dr-sub2,
-.dr-sub3 {
+.dr-todo-list,
+.dr-haru-thankyou,
+.dr-haru-feedback {
   font-size: larger;
 }
 
