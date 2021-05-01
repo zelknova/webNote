@@ -61,11 +61,14 @@
     <!--Main-->
     <main id="mainarea" class="mainarea">
       <!--ToDo List-->
-      <input type="date" class="dr-today-is">
+      <input type="date" class="dr-today-is" />
       <div class="dr-container">
         <div class="toDoList__Box">
-          <p class="dr-todo-list">ToDo List 작성하기 <span  id="dr-num-todo" style="background-color: #66ffa6;">0</span></p>
-          
+          <p class="dr-todo-list">
+            ToDo List 작성하기
+            <span id="dr-num-todo" style="background-color: #66ffa6">0</span>
+          </p>
+
           <form class="dr-toDoForm">
             <input
               id="dr-write-todolist"
@@ -148,27 +151,25 @@
         <!-- div.container>div.item${$}*10 -->
         <!-- <div class="dr-tbl-content"> -->
         <!-- <ul class="dr-tbl-inputarea"> -->
+
+        <!-- TODO: 입력창에 내용 입력하기 -->
         <!-- Input Time -->
-        <li>
+        <form class="dr-contextForm">
           <input class="dr-tbl-input-time" type="text" placeholder="07:00" />
-        </li>
+          <input class="dr-tbl-input-time2" type="text" placeholder="08:00" />
+        </form>
+
         <!-- Input Context -->
-        <!-- <li><input class="dr-tbl-input-context" type="text" placeholder="구체적으로 적으세요"></li> -->
-        <div class="context__Box">
-          <!-- <p class="dr-sub1">Inhalt</p> -->
-          <form class="dr-tbl-input-context">
-            <input
-              class="dr-write-input"
-              type="text"
-              placeholder="구체적으로 적으세요!"
-            />
-          </form>
-          <br />
-          <span class="dr-show-contextList"></span>
-        </div>
+        <form class="dr-contextForm">
+          <input
+            class="dr-tbl-input-context"
+            type="text"
+            placeholder="구체적으로 적으세요!"
+          />
+        </form>
 
         <!-- Input Focus -->
-        <li>
+        <form class="dr-contextForm">
           <select
             class="dr-tbl-input-focus-select"
             onchange="this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor"
@@ -189,40 +190,71 @@
               최하
             </option>
           </select>
-        </li>
-        <li>
+        </form>
+
+        <!-- Input Focus Reason -->
+        <form class="dr-contextForm">
           <input
-            class="dr-write-input"
+            class="dr-tbl-input-context"
             type="text"
             placeholder="핸디 사용"
           />
-        </li>
-        <li>
+        </form>
+
+        <!-- Input Feedback -->
+        <form class="dr-contextForm">
           <input
-            class="dr-write-input"
+            class="dr-tbl-input-feedback"
             type="text"
             placeholder="핸디 자동차 모드!"
           />
-        </li>
-        <!-- </ul> -->
-        <!-- </div> -->
+        </form>
       </div>
-      <div class="dr-timetbl-grp">
-        <span class="dr-show-timeList"></span>
-        <span class="dr-show-contextList"></span>
-        <span class="dr-show-focusList"></span>
-        <span class="dr-show-focusReasonList"></span>
-        <span class="dr-show-feedbackList"></span>
-      </div>
-      <!--inputarea가 container-->
 
-      <div class="dr-table-btn">
-        <a href="#"><i class="far fa-plus-square"></i></a>
-        <a href="#"><i class="far fa-minus-square"></i></a>
+      <!-- Added Input List -->
+      <!-- TODO: 여기에 input 박스에 입력값을 받아야 한다. -->
+      <ul class="dr-timetbl-grp">
+        <!-- <input type=text/> -->
+        <li class="dr-show-timeList"></li>
+        <li class="dr-show-contextList"></li>
+        <li class="dr-show-focusList"></li>
+        <li class="dr-show-focusReasonList"></li>
+        <li class="dr-show-feedbackList"></li>
+      </ul>
+
+      <!-- 입력한 값이 보이는 창. 그룹으로 묶어 있어서 드레그로 이동 가능 -->
+      <!-- Example -->
+      <br />
+      <br />
+      <div class="list-grp">
+        <div class="test-grp1">
+          <li><span>05:30 07:00</span></li>
+          <li>커피 한잔 준비 후 거실 소파에서 빡독 진행. 부의 추월차선</li>
+          <li>
+            <div class="test123" style="background-color: yellow">&nbsp;</div>
+          </li>
+          <li>소파에 앉았더니 눕게되고, 누웠더니 졸았다.</li>
+          <li>내 방 책상에서 해보자.</li>
+        </div>
+        <div class="test-grp2">
+          <li><span>07:00 08:00</span></li>
+          <li>데일리리포트 작성 후 아침식사 + 세면 + 출근 준비</li>
+          <li>
+            <div class="test123" style="background-color: #66ffa6">&nbsp;</div>
+          </li>
+          <li>유튜브 보면서 15분 소비</li>
+          <li>유튜브 보지 않기</li>
+        </div>
       </div>
+      <button>제출하기</button>
+      <!-- 여기서 제출하기 누르면 text input 창에 있는 모든 것이 전송되어 저장되는 구조. -->
     </main>
     <hr />
 
+    <!-- <div class="dr-table-btn">
+      <a href="#"><i class="far fa-plus-square"></i></a>
+      <a href="#"><i class="far fa-minus-square"></i></a>
+    </div> -->
     <footer id="footer" class="footer"></footer>
 
     <script src="header.js" defer></script>

@@ -250,7 +250,10 @@ span li:hover {
   color: #ff1744;
 }
 /* 테이블메뉴 */
-.dr-table-container {
+/* added contexts area - GROUP 이것도 테이블 메뉴랑 같은 레이아웃*/
+.dr-table-container,
+.test-grp1,
+.test-grp2 {
   grid-template-areas: "time context select focus feedback";
   grid-template-columns: 100px 1fr 100px 1fr 1fr;
   display: grid;
@@ -265,12 +268,19 @@ span li:hover {
 
 .dr-tbl-input-time {
   grid-area: time;
-  width: 50px;
+  width: 47px;
+  /* justify-self: start; */
+}
+
+form .dr-tbl-input-time2 {
+  width: 47px;
+  display: inline;
   /* justify-self: start; */
 }
 
 .dr-tbl-input-context {
   grid-area: context;
+  width: 100%;
 }
 .dr-write-input {
   width: 100%;
@@ -287,6 +297,7 @@ span li:hover {
 
 .dr-tbl-input-feedback {
   grid-area: feedback;
+  width: 100%;
 }
 
 /* 각 항목 도움말 표시 w3school */
@@ -332,6 +343,17 @@ span li:hover {
   border-style: solid;
   border-color: var(--helpBallon-color) transparent transparent transparent;
 }
+
+/* test 영역 */
+.test123 {
+  width: 100px;
+}
+
+.list-grp :hover {
+  background-color: aqua;
+  z-index: 1;
+}
+/* test로 검색하면 됨 */
 
 /*footer 영역*/
 .footer {
